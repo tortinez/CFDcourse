@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.30)  1 OCT 2016 20:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.30)  4 OCT 2016 13:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -379,27 +379,53 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1] (./theory.bbl
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (14.10736pt too wide) in paragraph at lines 35--36
+\OT1/cmr/m/n/12 bet-ter to take it from \OT1/cmtt/m/n/12 openfoam4/applications
+/uilities/mesh/generation/ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--46
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--46
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--46
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--46
+
+ []
+
+[1] [2] (./theory.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [2] (./theory.aux) ) 
+) [3] (./theory.aux) ) 
 Here is how much of TeX's memory you used:
- 695 strings out of 494910
- 7705 string characters out of 6179836
- 54719 words of memory out of 5000000
- 4042 multiletter control sequences out of 15000+600000
- 6370 words of font info for 23 fonts, out of 8000000 for 9000
+ 698 strings out of 494910
+ 7741 string characters out of 6179836
+ 57719 words of memory out of 5000000
+ 4044 multiletter control sequences out of 15000+600000
+ 6846 words of font info for 25 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 23i,7n,19p,144b,194s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 23i,7n,19p,376b,194s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pf
-b>
-Output written on theory.pdf (3 pages, 30065 bytes).
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on theory.pdf (4 pages, 49269 bytes).
 PDF statistics:
- 26 PDF objects out of 1000 (max. 8388607)
- 17 compressed objects within 1 object stream
+ 33 PDF objects out of 1000 (max. 8388607)
+ 22 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
