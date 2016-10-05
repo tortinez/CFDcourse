@@ -1,0 +1,35 @@
+
+
+\section{Session 4}
+
+
+\subsection{Using Salome Meca}
+\paragraph{}The first hour consisted on building the geometry of an \textsf{Y-pipe} with a software called \emph{Salome Meca}. A complete guide on video (with an older version of the program) can be found in:\\
+\url{http://caelinux.org/wiki/downloads/docs/Pipe2007/PipeGeom.htm}
+\paragraph{}We open Salome by writting the following line on a terminal window\\
+\lstinline!'/opt/salome_meca/appli_V2016/runAppli'!
+\subsection{Constructing the mesh}
+\paragraph{}We want to make the mesh uing paraview. First we have to create a case. Look ffor a similar tutorial as a basis for our mesh (and of course similar to the case we want to run). For the pipe problem we can start with the motorbike case
+
+\paragraph{}
+We must copy the motorbike folder, change its name to Ypipe, in the system folder there is a file named \texttt{BlockMeshDict}. We must modify the block geometry to put the pipe inside it. The new values for the block are:
+See david's notes
+
+\paragraph{}the next steps involve refining the mesh. To do so we are going to use \textbf{snappyHexMesh}(See reference 1). We must define the level 0 of the mesh..... See Drugas notes.
+
+\paragraph{}The next step is to take \texttt{SnappyHexMesh} dictionary. Rather than create it is better to take it from \texttt{openfoam4/applications/uilities/mesh/generation/\\snappyhexmesh} and paste it to the \texttt{case/system} folder. Inside the file there are a lot of comments and explanations about the mesh configuration and parameters.
+
+\paragraph{}It is possible to define an upper level of discretization inside our blockMesh using searchablebox
+
+\paragraph{}\textbf{SnappyHexMesh} is one of the only meshers that can perform a parallel mesh of the domain (using multiple cores). The parameter \texttt{maxLocalCells} and \texttt{maxGlobalCells} define the maximum number of cells per core and the maximum number of cells on the global mesh respectively.
+
+
+
+.......
+.......
+.......\\\\\\\\\
+
+
+the parameter \texttt{LocationInMesh} let us decide wether we want to mesh inside or outside our geometry. the input has to be a point inside of the object
+
+inside the folder \texttt{Ypipe/trisurface} we must have the four surfaces .stl files.
