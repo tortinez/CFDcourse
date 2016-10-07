@@ -15,13 +15,35 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-1
+4
 (
-    frontAndBack
+    inlet1
     {
         type            patch;
-        nFaces          768;
-        startFace       3456;
+        inGroups        1(meshedPatches);
+        nFaces          504;
+        startFace       118700;
+    }
+    inlet2
+    {
+        type            patch;
+        inGroups        1(meshedPatches);
+        nFaces          110;
+        startFace       119204;
+    }
+    outlet
+    {
+        type            patch;
+        inGroups        1(meshedPatches);
+        nFaces          256;
+        startFace       119314;
+    }
+    pipewall
+    {
+        type            patch;
+        inGroups        1(meshedPatches);
+        nFaces          16384;
+        startFace       119570;
     }
 )
 

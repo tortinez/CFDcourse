@@ -6,7 +6,7 @@
 	\item Put all the solids into a single file
 	\item Modify SnappyHexMesh dictionary to specify these solids 	into the regions section.
 \end{enumerate}
-\paragraph{}The process is nearly the same as in the session 4. When executing a command we can print the terminal output of the command to a log (e.g \texttt{snappyHexMesh > snappy.log} or \texttt{foamJob snappyHexMesh, this one prints also the output to the terminal}. we can clean the polymesh folder directy by tipping \texttt{foamCleanPolyMesh}. If we want to only have a single mesh stored in the constant folder we can do it by tipping \texttt{snappyHexMesh -owerwrite} 
+\paragraph{}The process is nearly the same as in the session 4. When executing a command we can print the terminal output of the command to a log (e.g \texttt{snappyHexMesh > snappy.log} or \texttt{foamJob -s snappyHexMesh, this one prints also the output to the terminal}. we can clean the polymesh folder directy by tipping \texttt{foamCleanPolyMesh}. If we want to only have a single mesh stored in the constant folder we can do it by tipping \texttt{snappyHexMesh -owerwrite}. It's important to have the final mesh stored in the constant folder.
 
 \subsection{Simulating the case}
 \paragraph{}A good advice before simulating a case is to make a copy of the 0 folder in order to be able to reset the case.
@@ -26,12 +26,10 @@ patchName
 	value 		uniform(Ux Uy Uz);
 }
 \end{lstlisting}
+
 \paragraph{}the \texttt{inletOutlet;} option in the type field means that in the oultet when the flow is going out of the domain the boundary condition is Zero Gradient avoiding the flow to returning inside of the domain.
+\paragraph{}Now the computer know the velocity on different points of the geometry. And the computer will compute the relative pressure between the points on the domain. Hence, it has to know the pressure in one of the points. We modify the \texttt{p} file to have pressure equal to 0 in outlet and a zerogradient in the rest. Then we have to modify the file turbulenceProperties to perform a laminar simulation. 
 
-
-
-fixedValue 
-change it to uniform(0 0 0)
 \subsection{Constructing the mesh}
 \paragraph{}We want to make the mesh using \textbf{ParaView}. We can also use directly \emph{Salome-Meca} to mesh the pipe but its mesher is not as good as the one we're going to use. First we have to create a case. A good option is to look for a similar tutorial case as a basis for our mesh (and of course similar to the case we want to run). For the Y-pipe problem we can start with the motorbike case. To do so, create a folder and name it as Ypipe, then copy inside it the folders contained in the motorbike case. It can be done in a terminal by typing:
 \begin{scriptsize}
