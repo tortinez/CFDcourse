@@ -1,0 +1,104 @@
+\lstset{language=C}
+\section{Session 6}
+\subsection{Solvers}
+\begin{itemize}
+\item{} incompressible
+	\begin{itemize}
+	\item{} Simple Foam
+	\begin{itemize}
+		\item{} steady
+		\item{} turbulent
+	\end{itemize}
+	\item{} PisoFoam
+	\begin{itemize}
+		\item{} transient
+	\end{itemize}
+	\item{} PimpleFoam (piso + simple)
+	\end{itemize}	
+\item{} compressible
+\begin{itemize}
+	\item{} rhoSimpleFoam
+	\begin{itemize}
+		\item{} steady
+		\item{} compressible
+	\end{itemize}
+\end{itemize}
+\end{itemize}
+\paragraph{}It's interesting to differentate \texttt{pimpleDyMFoam} which is based in the use of Dynamic Mesh. It's not easy to implement but it's interesting.
+
+\subsection{Parallel Computation with OpenFoam}
+\paragraph{}Our aim is to decompose the problem we are dealing with in four or whatever is the number of cores that we have. The instruction that we have to use is \texttt{decompose Par}. This methodology needs to know the Boundary conditions between the differents parts of the decomposed domain. 
+\paragraph{}Using this method doesn't reduce the time as a linear proportion. This is because the major part of the time is used on communication between the cores.
+
+
+\subsection{Taking a tutorial}
+\paragraph{}We are going to simulate the motorBike case using parallel computation.
+\paragraph{}First of all we have to copy the case in a new folder using:
+\begin{lstlisting}
+mkdir -p Parallel
+cp -r /opt/openfoam4/tutorials/incompressible/simpleFoam/motorBike/* ./Parallel/
+
+\end{lstlisting}
+\paragraph{}Then we have to copy the surface of the motorBike in our folder. To do so type:
+\begin{lstlisting}
+cp -r /opt/openfoam4/tutorials/resources/geometry/motorBike.obj.gz  ./Parallel/constant/triSurface/
+\end{lstlisting}
+\paragraph{}Now we must perform a surfaceFeatureExtract because we have a complex surface. This is used to tell snappyHexMesh to pay special attention to critical points in the surface of the motorbike. It writes a lot of files, the most interesting is the one named \lstinline!motorByke.emesh!. We can specify the level of discretization in those critical points by \texttt{features} in \textbf{snappyHexMeshdict}.
+
+\paragraph{}Meshing the case only with one core takes $246 s$. Now we are going to clone the case and perform it with 2 cores. Type:
+\begin{lstlisting}
+ foamCloneCase Parallel/ Parallel2cores
+ rm -rf 1
+\end{lstlisting}
+
+\paragraph{}Open the file \lstinline!decomposeParDict!. There are some interesting parameters. Modify it as follows and then run \texttt{decomposePar}
+
+\begin{tiny}
+\begin{lstlisting}
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.0                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      decomposeParDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+numberOfSubdomains 2;
+
+method          hierarchical;
+// method          ptscotch;
+
+simpleCoeffs
+{
+    n               (4 1 1);
+    delta           0.001;
+}
+
+hierarchicalCoeffs
+{
+    n               (2 1 1);
+    delta           0.001;
+    order           xyz;
+}
+
+manualCoeffs
+{
+    dataFile        "cellDecomposition";
+}
+
+
+// ************************************************************************* //
+\end{lstlisting}
+\end{tiny}
+
+\paragraph{}tWhen using parallel computation the cores we are usng needs to communicate between them. To do so, we have to use the library MPI (Multiple Processor Interface). It's difficult to implement, so OpenFoam has a function to make it easier. We only have to type: \lstinline!foamJob -s -p snappyHexMesh!. This command means that we want to run snappyHexMesh in parallel. With two cores the mesh takes $182.72 s$
+\paragraph{}Now the computer know the velocity on different points of the geometry. And the computer will compute the relative pressure between the points on the domain. Hence, it has to know the pressure in one of the points. We modify the \texttt{p} file to have pressure equal to 0 in outlet and a zerogradient in the rest. Then we have to modify the file turbulenceProperties to perform a laminar simulation. 
