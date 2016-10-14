@@ -42,7 +42,7 @@ vertices
 \end{figure}
 
 \subsection{Refining the mesh}
-\paragraph{}The next steps involve refining the mesh. To do so we are going to use \textbf{snappyHexMesh}(See reference). We must define the level 0 of the mesh. In this level we must have a meh as regular as possible. Open \texttt{BlockMeshDict} an edit the following line:
+\paragraph{}The next steps involve refining the mesh. To do so we are going to use \textbf{snappyHexMesh}(See reference). We must define the level 0 of the mesh. In this level we must have a mesh as regular as possible (squares in all 3 directions). Open \texttt{BlockMeshDict} an edit the following line:
 \begin{center}
 \begin{lstlisting}
 blocks
@@ -51,7 +51,12 @@ blocks
 );
 \end{lstlisting}
 \end{center}
-\paragraph{}The values \lstinline!(44 64 10)! define the number of cells on the x, y and z respectively. When we achieve a regular and dense enough mesh we must edit the lines below to have all the faces in the same type patch.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.2]{mesh2.png}
+\caption{Second mesh. Glando}
+\end{figure}
+\paragraph{}The values \lstinline!(44 64 10)! define the number of cells in the x, y and z respectively. When we've achieved a regular and dense enough mesh we must edit the lines below to have all the faces in the same type patch.
 \begin{center}
 \begin{lstlisting}
 boundary
@@ -72,9 +77,9 @@ boundary
 );
 \end{lstlisting}
 \end{center}
-\paragraph{}The next step is to take \texttt{SnappyHexMesh} dictionary. Rather than create it is better to take it from \texttt{openfoam4/applications/uilities/mesh/generation/\\snappyhexmesh} and paste it to the \texttt{Ypipe/system} folder. Inside the file there are a lot of comments and explanations about the mesh configuration and parameters (it's some kind of template).
+\paragraph{}The next step is to take \texttt{SnappyHexMesh} dictionary. Rather than create it, is better to take it from \texttt{openfoam4/applications/uilities/mesh/generation/\\snappyhexmesh} and paste it to the \texttt{Ypipe/system} folder. Inside the file there are a lot of comments and explanations about the mesh configuration and parameters (it's some kind of template).
 
-\paragraph{}Let's see the geometry section of \texttt{snappyHexMeshDict} . It is possible to define an upper level of discretization inside our blockMesh using \texttt{searchableBox}. But for this case is not necessary so we can delete it from the dictionary. Then we have to define all the solids we have in the problem. Every \texttt{.stl} file we have stored in the triSurface has to be defined here as follows. We can also include sub-solids in the same file but we saved them in different files sothe regions section should we empty.
+\paragraph{}Let's see the geometry section of \texttt{snappyHexMeshDict}. It's possible to define an upper level of discretization inside our blockMesh using \texttt{searchableBox}. For this case is not necessary so we can delete it from the dictionary. Below, we must define all the solids we have in the problem. Every \texttt{.stl} file we have stored in the triSurface has to be specified here as follows. We can also include sub-solids in the same file, but we saved them in different files so the regions section should we empty.
 \begin{center}
 \begin{lstlisting}
 geometry
@@ -120,6 +125,6 @@ geometry
 \end{lstlisting}
 \end{center}
 
-\paragraph{}\textbf{SnappyHexMesh} is one of the only meshers that can perform a parallel mesh of the domain (using multiple cores). This feature is enabled by \emph{castellatedMesh} feature. The parameter \texttt{maxLocalCells} and \texttt{maxGlobalCells} define the maximum number of cells per core and the maximum number of cells on the global mesh respectively. Another important parameter is the \emph{Surface based refinement}. with this we can modify the maximum and minimum level of refinement of the solids. It detects when to surfaces are intersecting and let us apply an upper level of refinement to this edges. We have to define here all the solids as we've done before\footnote{It's important to include the full file name e.g. file.stl if we are dealing with separated files. If we work with regions only the patch name}.
+\paragraph{}\textbf{SnappyHexMesh} is one of the only meshers that can perform a parallel mesh of the domain (using multiple cores). This feature is enabled by \emph{castellatedMesh} feature. The parameter \texttt{maxLocalCells} and \texttt{maxGlobalCells} define the maximum number of cells per core and the maximum number of cells on the global mesh respectively. Another important parameter is the \emph{Surface based refinement}. Using this we can modify the maximum and minimum level of refinement of the solids. It detects when two surfaces are intersecting and let us apply an upper level of refinement to this edges. We have to define here all the solids as we've done before\footnote{It's important to include the full file name e.g. file.stl if we are dealing with separated files. If we work with regions only the patch name}.
 
 \paragraph{}Lastly, we are going to modify the \texttt{locationInMesh} parameter. This define if we want to study the outside or the inside of the solid (and so we mesh the specified region of the domain). For this case we are going to study the flow inside the pipe so we put a point inside it (\texttt{(2.522222332 1.2324 0.0343)} is a good point) Now we save and close the file, and then type texttt{SnappyHexMesh} in the terminal window. The we can view the results by opening paraFoam.
