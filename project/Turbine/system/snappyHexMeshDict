@@ -156,7 +156,7 @@ castellatedMeshControls
         Fan.stl
         {
             // Surface-wise min and max refinement level
-            level (3 5);
+            level (2 3);
 
             // Optional region-wise level specification
             regions
@@ -171,7 +171,7 @@ castellatedMeshControls
         HPSpool.stl
         {
             // Surface-wise min and max refinement level
-            level (3 5);
+            level (2 3);
 
             // Optional region-wise level specification
             regions
@@ -186,7 +186,7 @@ castellatedMeshControls
         LPSpool.stl
         {
             // Surface-wise min and max refinement level
-            level (3 5);
+            level (2 3);
 
             // Optional region-wise level specification
             regions
@@ -201,7 +201,7 @@ castellatedMeshControls
         NacelleStator.stl
         {
             // Surface-wise min and max refinement level
-            level (3 5);
+            level (2 3);
 
             // Optional region-wise level specification
             regions
@@ -273,7 +273,7 @@ castellatedMeshControls
     // section reachable from the locationInMesh is kept.
     // NOTE: This point should never be on a face, always inside a cell, even
     // after refinement.
-    locationInMesh (80 210 200);
+    locationInMesh (97.443222 140.534444343 124.221211);
 
     // Whether any faceZones (as specified in the refinementSurfaces)
     // are only on the boundary of corresponding cellZones or also allow

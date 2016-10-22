@@ -19,34 +19,33 @@ FoamFile
 
 dimensions      [0 1 -1 0 0 0 0];
 
-internalField   uniform $flowVelocity;
+internalField   uniform (0 0 0);
 
 boundaryField
 {
     //- Set patchGroups for constraint patches
-    #includeEtc "caseDicts/setConstraintTypes"
+    //#includeEtc "caseDicts/setConstraintTypes"
 
-    #include "include/fixedInlet"
+   // #include "include/fixedInlet"
 
     outlet
     {
         type            inletOutlet;
-        inletValue      uniform (0 0 0);
+        inletValue      uniform (30 0 0);
         value           $internalField;
     }
 
-    lowerWall
+    NacelleState.stl
     {
-        type            fixedValue;
-        value           $internalField;
+        type            noSlip
     }
 
-    motorBikeGroup
+    LPSpool.stl
     {
         type            noSlip;
     }
 
-    #include "include/frontBackUpperPatches"
+   // #include "include/frontBackUpperPatches"
 }
 
 

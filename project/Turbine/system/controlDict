@@ -44,7 +44,7 @@ timePrecision   6;
 
 runTimeModifiable true;
 
-functions
+/*functions
 {
     #include "streamLines"
     #include "wallBoundedStreamLines"
@@ -52,5 +52,5 @@ functions
     #include "forceCoeffs"
 }
 
-
+*/
 // ************************************************************************* //
