@@ -1,0 +1,37 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.0                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 4.0-665f1db4c1f1
+Exec   : surfaceConvert NacelleStator.stl ./scaled/NacelleStator.stl -clean -scale 0.01
+Date   : Nov 19 2016
+Time   : 16:50:23
+Host   : "victorPC"
+PID    : 9679
+Case   : /home/victor/Documents/Git/CFDcourse/project/turbine
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Reading : "NacelleStator.stl"
+Read surface:
+Triangles    : 35921
+Vertices     : 17476
+Bounding Box : (1.69931 9.6033 8.63495) (355.216 223.381 222.613)
+
+Cleaning up surface
+After cleaning up surface:
+Triangles    : 35921
+Vertices     : 17476
+Bounding Box : (1.69931 9.6033 8.63495) (355.216 223.381 222.613)
+
+Maintaining face ordering
+writing "./scaled/NacelleStator.stl" with scaling 0.01
+
+End
+

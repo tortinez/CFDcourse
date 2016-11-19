@@ -1,0 +1,419 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.0                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 4.0-665f1db4c1f1
+Exec   : surfaceConvert Combustion.stl ./scaled/Combustion.stl -clean -scale 0.01
+Date   : Nov 19 2016
+Time   : 16:50:43
+Host   : "victorPC"
+PID    : 9686
+Case   : /home/victor/Documents/Git/CFDcourse/project/turbine
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Reading : "Combustion.stl"
+Read surface:
+Triangles    : 200962
+Vertices     : 99766
+Bounding Box : (171.982 88.741 88.3509) (216.201 143.635 143.155)
+
+Cleaning up surface
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 3467 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:92533 92239 92533
+    vertex coords :(199.234 124.483 134.802) (199.23 123.606 135.162) (199.234 124.483 134.802)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 3500 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:92533 92239 92239
+    vertex coords :(199.234 124.483 134.802) (199.23 123.606 135.162) (199.23 123.606 135.162)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 3522 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:92608 92533 92533
+    vertex coords :(199.235 124.689 134.701) (199.234 124.483 134.802) (199.234 124.483 134.802)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 3524 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:92980 92608 92980
+    vertex coords :(199.241 126.064 134.029) (199.235 124.689 134.701) (199.241 126.064 134.029)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 3525 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:93281 92980 92980
+    vertex coords :(199.247 127.37 133.247) (199.241 126.064 134.029) (199.241 126.064 134.029)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 4021 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:95491 95651 95651
+    vertex coords :(202.572 134.884 124.084) (202.597 135.313 123.777) (202.597 135.313 123.777)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 4243 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:95197 95651 95651
+    vertex coords :(202.6 135.74 122.633) (202.597 135.313 123.777) (202.597 135.313 123.777)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 4261 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:93752 94059 93752
+    vertex coords :(202.609 136.658 119.035) (202.608 136.516 119.755) (202.609 136.658 119.035)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 4267 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:95092 95197 95092
+    vertex coords :(202.601 135.866 122.296) (202.6 135.74 122.633) (202.601 135.866 122.296)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 4268 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:94639 95092 95092
+    vertex coords :(202.604 136.174 121.206) (202.601 135.866 122.296) (202.601 135.866 122.296)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 15570 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:28160 28501 28160
+    vertex coords :(191.935 114.753 102.147) (191.933 114.735 102.434) (191.935 114.753 102.147)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 15612 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:28160 28160 31958
+    vertex coords :(191.935 114.753 102.147) (191.935 114.753 102.147) (193.614 114.749 102.171)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 17591 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:50111 49564 50111
+    vertex coords :(183.877 117.644 129.363) (183.877 117.586 129.084) (183.877 117.644 129.363)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 24450 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:50111 48807 50111
+    vertex coords :(183.877 117.644 129.363) (183.299 117.646 129.362) (183.877 117.644 129.363)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 38586 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:1026 1006 1026
+    vertex coords :(173.128 104.511 102.762) (173.072 104.501 102.762) (173.128 104.511 102.762)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 50099 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:15288 15288 13764
+    vertex coords :(183.837 100.956 117.352) (183.837 100.956 117.352) (182.89 100.957 117.351)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 64222 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:64357 64357 62783
+    vertex coords :(183.996 142.268 113.01) (183.996 142.268 113.01) (183.05 142.269 113.008)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 66852 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:76755 76755 75159
+    vertex coords :(190.605 142.244 113.021) (190.605 142.244 113.021) (189.658 142.245 113.019)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 85676 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:15288 15288 16285
+    vertex coords :(183.837 100.956 117.352) (183.837 100.956 117.352) (183.839 102.129 117.22)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 111290 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:76755 76755 78482
+    vertex coords :(190.605 142.244 113.021) (190.605 142.244 113.021) (190.607 143.417 112.889)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 111593 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:64357 64357 66064
+    vertex coords :(183.996 142.268 113.01) (183.996 142.268 113.01) (183.999 143.441 112.878)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 115805 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:93752 96706 93752
+    vertex coords :(202.609 136.658 119.035) (205.678 136.851 119.038) (202.609 136.658 119.035)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 115932 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:72379 70620 70620
+    vertex coords :(199.318 133.503 104.359) (199.317 132.964 103.571) (199.317 132.964 103.571)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 116151 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:79455 77909 79455
+    vertex coords :(199.319 135.545 108.324) (199.319 135.185 107.448) (199.319 135.545 108.324)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 116349 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:73913 79455 79455
+    vertex coords :(196.253 136.148 108.211) (199.319 135.545 108.324) (199.319 135.545 108.324)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 117913 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:70620 70620 64635
+    vertex coords :(199.317 132.964 103.571) (199.317 132.964 103.571) (196.249 133.075 103.468)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 119404 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:84996 79402 84996
+    vertex coords :(199.189 112.901 136.287) (196.121 112.911 136.421) (199.189 112.901 136.287)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 119454 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:92239 92239 89067
+    vertex coords :(199.23 123.606 135.162) (199.23 123.606 135.162) (196.161 123.735 135.858)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 125057 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:99605 99605 99489
+    vertex coords :(214.214 127.828 137.395) (214.214 127.828 137.395) (212.983 127.407 137.468)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 125187 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:99605 99631 99605
+    vertex coords :(214.214 127.828 137.395) (214.214 128.173 137.789) (214.214 127.828 137.395)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 126849 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:99323 99424 99424
+    vertex coords :(213.05 139.001 122.867) (213.99 139.21 122.643) (213.99 139.21 122.643)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 126894 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:99306 99424 99424
+    vertex coords :(213.051 139.158 122.336) (213.99 139.21 122.643) (213.99 139.21 122.643)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 134370 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:88122 87577 88122
+    vertex coords :(203.193 110.241 135.694) (203.191 109.521 135.461) (203.193 110.241 135.694)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 134371 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:88584 88122 88122
+    vertex coords :(203.195 110.976 135.892) (203.193 110.241 135.694) (203.193 110.241 135.694)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 137205 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:98328 98328 98015
+    vertex coords :(214.142 109.122 139.361) (214.142 109.122 139.361) (212.912 108.773 139.111)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 137245 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:98396 98328 98328
+    vertex coords :(214.14 109.088 139.884) (214.142 109.122 139.361) (214.142 109.122 139.361)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 152347 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:38531 37600 37600
+    vertex coords :(200.831 98.499 110.548) (200.833 98.8124 109.587) (200.833 98.8124 109.587)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 154687 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:37600 37570 37600
+    vertex coords :(200.833 98.8124 109.587) (200.833 98.8272 109.551) (200.833 98.8124 109.587)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 157093 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:55670 57725 57725
+    vertex coords :(212.97 104.917 94.6071) (213.908 104.603 94.618) (213.908 104.603 94.618)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 157138 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:57725 55372 57725
+    vertex coords :(213.908 104.603 94.618) (212.968 104.43 94.8716) (213.908 104.603 94.618)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 165035 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:76173 77599 77599
+    vertex coords :(213.041 123.177 92.9012) (213.979 122.947 92.69) (213.979 122.947 92.69)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 165080 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:77599 75470 77599
+    vertex coords :(213.979 122.947 92.69) (213.039 122.646 92.7438) (213.979 122.947 92.69)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 176768 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:96951 97516 97516
+    vertex coords :(213.075 137.778 104.495) (214.305 137.699 104.072) (214.305 137.699 104.072)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 176771 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:96683 97261 97261
+    vertex coords :(213.073 137.295 104.607) (214.013 137.282 104.298) (214.013 137.282 104.298)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 176900 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:97552 97516 97516
+    vertex coords :(214.306 138.092 103.727) (214.305 137.699 104.072) (214.305 137.699 104.072)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 176905 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:96303 97261 97261
+    vertex coords :(213.073 137.031 104.12) (214.013 137.282 104.298) (214.013 137.282 104.298)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 186277 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:84996 83935 83935
+    vertex coords :(199.189 112.901 136.287) (199.186 111.962 136.116) (199.186 111.962 136.116)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 186278 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:84996 83935 84996
+    vertex coords :(199.189 112.901 136.287) (199.186 111.962 136.116) (199.189 112.901 136.287)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 186308 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:77236 77236 78862
+    vertex coords :(199.173 107.715 134.751) (199.173 107.715 134.751) (199.175 108.589 135.116)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 186334 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:78862 77236 78862
+    vertex coords :(199.175 108.589 135.116) (199.173 107.715 134.751) (199.175 108.589 135.116)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 186335 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:79196 78862 78862
+    vertex coords :(199.176 108.806 135.19) (199.175 108.589 135.116) (199.175 108.589 135.116)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 186359 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:83935 83707 83935
+    vertex coords :(199.186 111.962 136.116) (199.185 111.731 136.058) (199.186 111.962 136.116)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 200139 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:71124 77236 77236
+    vertex coords :(196.104 107.662 134.847) (199.173 107.715 134.751) (199.173 107.715 134.751)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 226
+    triangle 200882 does not have three unique vertices:
+--> FOAM Warning :     vertex numbers:60993 60993 39504
+    vertex coords :(205.548 100.874 117.388) (205.548 100.874 117.388) (196.108 100.902 117.373)    region        :0
+
+--> FOAM Warning : 
+    From function void Foam::triSurface::checkTriangles(bool)
+    in file triSurface/triSurface.C at line 300
+    Removing 54 illegal faces.
+After cleaning up surface:
+Triangles    : 200908
+Vertices     : 99766
+Bounding Box : (171.982 88.741 88.3509) (216.201 143.635 143.155)
+
+Maintaining face ordering
+writing "./scaled/Combustion.stl" with scaling 0.01
+
+End
+

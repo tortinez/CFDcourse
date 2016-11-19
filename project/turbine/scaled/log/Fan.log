@@ -1,0 +1,37 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.0                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 4.0-665f1db4c1f1
+Exec   : surfaceConvert Fan.stl ./scaled/Fan.stl -clean -scale 0.01
+Date   : Nov 19 2016
+Time   : 16:50:17
+Host   : "victorPC"
+PID    : 9678
+Case   : /home/victor/Documents/Git/CFDcourse/project/turbine
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Reading : "Fan.stl"
+Read surface:
+Triangles    : 13724
+Vertices     : 6868
+Bounding Box : (29.5933 17.5729 16.4736) (69.6534 215.742 214.604)
+
+Cleaning up surface
+After cleaning up surface:
+Triangles    : 13724
+Vertices     : 6868
+Bounding Box : (29.5933 17.5729 16.4736) (69.6534 215.742 214.604)
+
+Maintaining face ordering
+writing "./scaled/Fan.stl" with scaling 0.01
+
+End
+

@@ -1,0 +1,37 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.0                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 4.0-665f1db4c1f1
+Exec   : surfaceConvert LPSpool.stl ./scaled/LPSpool.stl -clean -scale 0.01
+Date   : Nov 19 2016
+Time   : 16:50:30
+Host   : "victorPC"
+PID    : 9683
+Case   : /home/victor/Documents/Git/CFDcourse/project/turbine
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Reading : "LPSpool.stl"
+Read surface:
+Triangles    : 7120
+Vertices     : 3776
+Bounding Box : (64.5568 67.8351 67.6398) (326.591 164.517 163.913)
+
+Cleaning up surface
+After cleaning up surface:
+Triangles    : 7120
+Vertices     : 3776
+Bounding Box : (64.5568 67.8351 67.6398) (326.591 164.517 163.913)
+
+Maintaining face ordering
+writing "./scaled/LPSpool.stl" with scaling 0.01
+
+End
+
